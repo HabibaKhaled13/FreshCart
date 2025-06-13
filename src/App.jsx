@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { createHashRouter, Outlet, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import Home from "../src/Components/Home/Home";
 import Layout from "../src/Components/Layout/Layout";
 import Products from "../src/Components/Products/Products";
@@ -28,7 +28,7 @@ import AllOrders from "./Components/AllOrders/AllOrders";
 
 function App() {
   let query = new QueryClient();
-  let x = createHashRouter([
+  let x = createBrowserRouter([
     {
       path: "",
       element: <Layout />,
