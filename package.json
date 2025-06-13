@@ -2,7 +2,7 @@
   "name": "freshcart",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://HabibaKhaled13/FreshCart",
+  "homepage": "https://HabibaKhaled13/FreshCart/git add .",
   "type": "module",
   "scripts": {
     "dev": "vite",
