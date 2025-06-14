@@ -25,7 +25,7 @@ import VerifyResetPassword from "./Components/VerifyResetPassword/VerifyResetPas
 import CheckOut from "./Components/CheckOut/CheckOut";
 import ProtectedRoute from "./Components/ProtectedRoute/ProtectedRoute";
 import AllOrders from "./Components/AllOrders/AllOrders";
-import AllOrdersContext from "./Context/AllOrdersContext";
+
 
 
 
@@ -71,7 +71,7 @@ function App() {
 
   return (
     <>
-    <AllOrdersContext>
+
       <UserContextProvider>
         <CartContextProvider>
           <QueryClientProvider client={query}>
@@ -87,7 +87,7 @@ function App() {
           </QueryClientProvider>
         </CartContextProvider>
       </UserContextProvider>
-      </AllOrdersContext>
+ 
     </>
   );
 }

@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import Slider from "react-slick";
 
 export default function CategoriesBar() {
@@ -52,11 +53,14 @@ export default function CategoriesBar() {
           </div>
         <div className="slider-container">
           <Slider {...settings}>
+           
             {brands.map((brand) => (
+               <Link to="categories">
               <div key={brand._id} className="cursor-pointer">
                 <img src={brand.image} alt="" className="w-full h-[200px] object-fill" />
                 <h4 className="text-center mt-2">{brand.name}</h4>
               </div>
+              </Link>
             ))}
           </Slider>
           </div>
