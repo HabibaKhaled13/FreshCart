@@ -2,10 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { CartContext } from "../../Context/CartContext";
 import { Link } from "react-router-dom";
 import card from "../../assets/images/card.svg";
-import cash from "../../assets/images/cash.svg";
-import stripe from "../../assets/images/Stripe.png";
-import { useFormik } from "formik";
-import toast from "react-hot-toast";
+import delivery from "../../assets/images/delivery-service.gif";
 
 export default function AllOrders() {
   let { getLoggedUserProduct, checkOut } = useContext(CartContext);
@@ -13,9 +10,6 @@ export default function AllOrders() {
   const [Time, setTime] = useState("tomorrow");
   const shippingFee = Time == "today" ? 35 : 0;
 
-  function data() {
-    toast.error("Please fill out the form first");
-  }
   async function getLoggedProduct() {
     let response = await getLoggedUserProduct();
     if (response.data.status == "success") {
@@ -23,21 +17,7 @@ export default function AllOrders() {
     }
   }
 
-  let formik = useFormik({
-    initialValues: {
-      details: "",
-      city: "",
-      phone: "",
-    },
-    onSubmit: () =>
-      handleSubmit("67e4d59de162abeefce9c515", "http://localhost:5173"),
-  });
 
-  async function handleSubmit(cartId, url) {
-    let { data } = await checkOut(cartId, url, formik.values);
-    console.log(data.session.url);
-    window.location.href = data.session.url;
-  }
   function totalPrice(total, fees, shippingFee) {
     return total + fees + shippingFee;
   }
@@ -64,10 +44,11 @@ export default function AllOrders() {
           <div className="row md:justify-between">
             <div className="lg:w-3/5  w-full">
               <div className="address">
-                <h2 className=" text-gray-700 mb-4 ">
+                <img src={delivery} alt="delivery-service" className="md:w-2/5 w-[75%] mx-auto" />
+                <p className=" text-gray-700 mb-4 ">
                   Find order invoice, payment and shipping details here
-                </h2>
-                <div className="flex justify-between flex-wrap"></div>
+                </p>
+    
               </div>
 
               <div className="your-order mt-5 md:mb-0 mb-3">

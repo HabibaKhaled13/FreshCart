@@ -5,6 +5,7 @@ export let CartContext = createContext();
 export default function CartContextProvider(props) {
   const [numOfCartItems, setNumOfCartItems] = useState(0);
   let headers = { token: localStorage.getItem("usertoken") };
+     const [CartId, setCartId] = useState([]);
 
  function addProductToCart(productId) {
     return axios
@@ -22,7 +23,9 @@ export default function CartContextProvider(props) {
         headers,
       })
       .then((res) => {
+
         setNumOfCartItems(res.data.numOfCartItems);
+        setCartId(res.data.data._id)
         return res
       }).catch((err) => err);
 
@@ -68,6 +71,7 @@ export default function CartContextProvider(props) {
           deleteProduct,
           checkOut,
           numOfCartItems,
+          CartId
         }}
       >
         {props.children}
