@@ -1,22 +1,27 @@
 import React, { useContext, useEffect, useState } from "react";
 import { CartContext } from "../../Context/CartContext";
 import { Link } from "react-router-dom";
+import Delivery from "../../assets/images/delivery-service.gif";
 import card from "../../assets/images/card.svg";
-import delivery from "../../assets/images/delivery-service.gif";
+
 
 export default function AllOrders() {
-  let { getLoggedUserProduct, checkOut } = useContext(CartContext);
+  let {  getLoggedUserProduct, checkOut,CartId } = useContext(CartContext);
   const [Cart, setCart] = useState(null);
+    const [isLoading, setIsLoading] = useState(false);
+
   const [Time, setTime] = useState("tomorrow");
   const shippingFee = Time == "today" ? 35 : 0;
 
   async function getLoggedProduct() {
+    setIsLoading(true)
     let response = await getLoggedUserProduct();
     if (response.data.status == "success") {
       setCart(response.data.data);
+      setIsLoading(false)
+  
     }
   }
-
 
   function totalPrice(total, fees, shippingFee) {
     return total + fees + shippingFee;
@@ -41,10 +46,21 @@ export default function AllOrders() {
             <i className=" ms-2 fa-solid fa-arrow-right"></i>
             </Link>
           </div>
+            {isLoading ? (
+            <div className="parent flex items-center justify-center w-full h-[80vh]">
+              <span className="loader"></span>
+              <div className="rect1"></div>
+              <div className="rect2"></div>
+              <div className="rect3"></div>
+              <div className="rect4"></div>
+              <div className="rect5"></div>
+            </div>
+          ) : Cart?.products?.length > 0 ? 
+          <>
           <div className="row md:justify-between">
             <div className="lg:w-3/5  w-full">
               <div className="address">
-                <img src={delivery} alt="delivery-service" className="md:w-2/5 w-[75%] mx-auto" />
+                <img src={Delivery} alt="delivery-service" className="md:w-2/5 w-[75%] mx-auto" />
                 <p className=" text-gray-700 mb-4 ">
                   Find order invoice, payment and shipping details here
                 </p>
@@ -179,9 +195,13 @@ export default function AllOrders() {
                   <p className="mb-2">P: 402-776-1106</p>
                 </div>
               </div>
+          
             </div>
           </div>
+          </>:null
+         }
         </div>
+        
       </section>
     </>
   );
