@@ -17,7 +17,7 @@ import { initFlowbite } from "flowbite";
 import "flowbite";
 
 export default function ProductDetails() {
-  let { addProductToCart } = useContext(CartContext);
+  let { addProductToCart,getLoggedUserProduct } = useContext(CartContext);
   const [WishCheack, setWishCheack] = useState([]);
   const [Color, setColor] = useState(false);
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
@@ -65,6 +65,7 @@ export default function ProductDetails() {
     let response = await addProductToCart(id);
     if (response.data.status == "success") {
       toast.success(response.data.message);
+       getLoggedUserProduct()
     } else {
       toast.error(response.data.message);
     }

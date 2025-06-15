@@ -18,24 +18,26 @@ export default function CategoriesBar() {
         breakpoint: 1024,
         settings: {
           slidesToShow: 4,
-          slidesToScroll: 1
-        }
+          slidesToScroll: 1,
+        },
       },
       {
         breakpoint: 768,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 1
-        }
-      }
-    ]
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   const [brands, setBrands] = useState([]);
   function getBrands() {
-    axios.get("https://ecommerce.routemisr.com/api/v1/categories").then((res) => {
-      setBrands(res.data.data);
-    });
+    axios
+      .get("https://ecommerce.routemisr.com/api/v1/categories")
+      .then((res) => {
+        setBrands(res.data.data);
+      });
   }
 
   useEffect(() => {
@@ -46,27 +48,27 @@ export default function CategoriesBar() {
     <>
       <section className="mt-12 mb-20">
         <div className="container ">
-        <div className="title mb-5">
-            <h2 className="text-2xl font-semibold text-gray-800">
-            Categories
-            </h2>
+          <div className="title mb-5">
+            <h2 className="text-2xl font-semibold text-gray-800">Categories</h2>
           </div>
-        <div className="slider-container">
-          <Slider {...settings}>
-           
-            {brands.map((brand) => (
-               <Link to="categories">
-              <div key={brand._id} className="cursor-pointer">
-                <img src={brand.image} alt="" className="w-full h-[200px] object-fill" />
-                <h4 className="text-center mt-2">{brand.name}</h4>
-              </div>
-              </Link>
-            ))}
-          </Slider>
+          <div className="slider-container">
+            <Slider {...settings}>
+              {brands.map((brand) => (
+                <Link to="categories" key={brand._id}>
+                  <div className="cursor-pointer">
+                    <img
+                      src={brand.image}
+                      alt=""
+                      className="w-full h-[200px] object-fill"
+                    />
+                    <h4 className="text-center mt-2">{brand.name}</h4>
+                  </div>
+                </Link>
+              ))}
+            </Slider>
           </div>
         </div>
       </section>
-
     </>
   );
 }
