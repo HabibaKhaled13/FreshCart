@@ -95,8 +95,8 @@ export default function Footer() {
           </div>
 
           <hr className="my-4 border-gray-200 sm:mx-auto  lg:my-4" />
-          <div className="lg:flex lg:justify-between ">
-            <div className="paymentMethods flex gap-x-2  items-center lg:mb-0 mb-5 lg:justify-start md:justify-center">
+          <div className="flex lg:justify-between flex-wrap">
+            <div className="paymentMethods flex w-full lg:w-auto gap-x-2  items-center lg:mb-0 mb-5 lg:justify-start md:justify-center">
               <h3 className="md:text-[15px] font-semibold mb-0 whitespace-nowrap ">
                 Payment Partners
               </h3>
@@ -108,13 +108,16 @@ export default function Footer() {
                 <img src={visa} alt="visa payment method" />
               </div>
             </div>
-            <div className="deliveriesApp flex lg:flex-nowrap flex-wrap items-center md:justify-end justify-center text-center  transition-all ">
+            <div className="deliveriesApp w-full lg:w-auto flex lg:flex-nowrap flex-wrap items-center md:justify-end justify-center text-center  transition-all ">
  
-               <div className="">  <h3 className="md:text-[15px] mb-2   font-semibold  whitespace-nowrap">
+               <div className=""> 
+                 <h3 className="md:text-[15px] mb-2   font-semibold  whitespace-nowrap">
                   Get deliveries with FreshCart
-                </h3></div>
+                </h3>
+                </div>
               
-          <div className="flex justify-center">     <img src={appStore} alt="app store app" className=" lg:w-[40%] w-1/3 me-2" />
+          <div className="flex justify-center">    
+             <img src={appStore} alt="app store app" className=" lg:w-[40%] w-1/3 me-2" />
 
                 <img src={googleApp} alt="google play app" className=" lg:w-[40%] w-1/3" />
  </div>

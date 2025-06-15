@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { createContext, useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
 
 export let WishlistContext = createContext();
 
@@ -45,6 +45,7 @@ export default function WishlistContextProvider(props) {
       })
       .catch((err) => err);
   }
+
   return (
     <>
       <WishlistContext.Provider
