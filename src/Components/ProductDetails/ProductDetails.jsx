@@ -221,7 +221,7 @@ export default function ProductDetails() {
                       </th>
                       <td class="px-6 py-4">In Stock</td>
                     </tr>
-                    <tr class="bg-white dark:bg-gray-800">
+                    <tr class="bg-white ">
                       <th
                         scope="row"
                         class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap "
@@ -230,7 +230,7 @@ export default function ProductDetails() {
                       </th>
                       <td class="px-6 py-4">{Product?.category.slug}</td>
                     </tr>
-                    <tr class="bg-white dark:bg-gray-800">
+                    <tr class="bg-white ">
                       <th
                         scope="row"
                         class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap "

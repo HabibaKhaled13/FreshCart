@@ -40,7 +40,7 @@ export default function AllProducts() {
               </div>
               <button
                 type="submit"
-                className="text-white mt-4 mb-2 bg-emerald-700 hover:bg-emerald-800 focus:ring-4 focus:outline-none focus:ring-emerald-300 font-medium rounded-lg text-sm w-full  px-5 py-2.5 text-center dark:bg-emerald-600 dark:hover:bg-emerald-700 dark:focus:ring-emerald-800">
+                className="text-white mt-4 mb-2 bg-emerald-700 hover:bg-emerald-800 focus:ring-4 focus:outline-none focus:ring-emerald-300 font-medium rounded-lg text-sm w-full  px-5 py-2.5 text-center   ">
                   Add to Cart
            
               </button>

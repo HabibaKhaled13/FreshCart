@@ -147,16 +147,16 @@ export default function Navbar() {
               </button>
               <div
                 id="dropdown-states"
-                className="z-10 hidden bg-white shadow-lg divide-y divide-gray-100 rounded-lg border w-44 dark:bg-gray-700"
+                className="z-10 hidden bg-white shadow-lg divide-y divide-gray-100 rounded-lg border w-44 "
               >
                 <ul
-                  className="py-2 text-sm text-gray-700 dark:text-gray-200"
+                  className="py-2 text-sm text-gray-700 "
                   aria-labelledby="states-button"
                 >
                   <li>
                     <button
                       type="button"
-                      className="inline-flex w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 "
+                      className="inline-flex w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100   "
                     >
                       <div className="inline-flex items-center">
                         <svg
@@ -269,7 +269,7 @@ export default function Navbar() {
                   <li>
                     <button
                       type="button"
-                      className="inline-flex w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 "
+                      className="inline-flex w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100   "
                     >
                       <div className="inline-flex items-center">
                         <svg
@@ -395,13 +395,13 @@ export default function Navbar() {
 
                 <div
                   id="drawer-navigation"
-                  className="fixed top-0 left-0 z-40 w-[70%] h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-white dark:bg-gray-800 "
+                  className="fixed top-0 left-0 z-40 w-[70%] h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-white  "
                   tabIndex="-1"
                   aria-labelledby="drawer-navigation-label"
                 >
                   <h5
                     id="drawer-navigation-label"
-                    className="text-base font-semibold text-gray-500 uppercase dark:text-gray-400"
+                    className="text-base font-semibold text-gray-500 uppercase "
                   >
                     <img src={logo} alt="logo" className="pt-1" />
                   </h5>
@@ -409,7 +409,7 @@ export default function Navbar() {
                     type="button"
                     data-drawer-hide="drawer-navigation"
                     aria-controls="drawer-navigation"
-                    className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 end-2.5 inline-flex items-center dark:hover:bg-gray-600 "
+                    className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 end-2.5 inline-flex items-center  "
                   >
                     <svg
                       aria-hidden="true"

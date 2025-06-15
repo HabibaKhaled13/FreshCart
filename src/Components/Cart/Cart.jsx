@@ -100,7 +100,7 @@ export default function Cart() {
               <div className="row md:justify-between md:g-y-0 gap-y-12">
                 <div className="md:w-3/5 w-full">
                   <div
-                    className="flex items-center px-3 py-2 mb-6 text-[15px] border border-red-700 text-red-800 rounded-lg bg-red-100 dark:bg-gray-800"
+                    className="flex items-center px-3 py-2 mb-6 text-[15px] border border-red-700 text-red-800 rounded-lg bg-red-100"
                     role="alert"
                   >
                     <span className="sr-only">Info</span>
@@ -111,7 +111,7 @@ export default function Cart() {
                   </div>
 
                   <div className="relative overflow-x-auto">
-                    <table className="w-full text-sm text-center text-gray-500 dark:text-gray-400">
+                    <table className="w-full text-sm text-center text-gray-500 ">
                       <thead className="text-xs text-gray-700 uppercase border-b">
                         <tr>
                           <th scope="col" className="px-16 py-3">
@@ -135,7 +135,7 @@ export default function Cart() {
                         {Cart.products.map((product) => (
                           <tr
                             key={product.product.id}
-                            className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600"
+                            className="bg-white border-b border-gray-200 hover:bg-gray-50 "
                           >
                             <td className="p-4">
                               <img
