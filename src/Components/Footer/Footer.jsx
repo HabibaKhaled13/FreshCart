@@ -1,6 +1,5 @@
 import React from "react";
 import amazonPay from "../../assets/images/amazonpay.svg";
-import american from "../../assets/images/american-express.svg";
 import masterCard from "../../assets/images/mastercard.svg";
 import payPal from "../../assets/images/payPal.svg";
 import visa from "../../assets/images/visa.svg";
@@ -102,7 +101,6 @@ export default function Footer() {
               </h3>
               <div className="img-payment flex gap-x-3 ">
                 <img src={amazonPay} alt="amazonPay payment method" />
-                <img src={american} alt="american payment method" />
                 <img src={masterCard} alt="masterCard payment method" />
                 <img src={payPal} alt="payPal payment method" />
                 <img src={visa} alt="visa payment method" />
