@@ -341,7 +341,7 @@ export default function Navbar() {
             </div>
             <div className="lg:w-1/4  md:w-1/5 w-[30%]">
               <div className="icons text-xl  text-gray-400 flex items-center justify-end md:gap-x-2 ">
-                <div className="btn hidden lg:flex gap-x-1">
+                <div className="btn  flex gap-x-1">
                 {Login != null ? (
                   <>
                     {" "}
@@ -370,14 +370,14 @@ export default function Navbar() {
                   </>
                 ) :   <>                   <Link
                             to="/login"
-                              className=" lg:block py-[9px] px-4 hover:text-white text-center text-emerald-600 border border-emerald-600 transition-all duration-200 font-medium rounded-md hover:bg-emerald-600 text-sm"
+                              className=" lg:block hidden py-[9px] px-4 hover:text-white text-center text-emerald-600 border border-emerald-600 transition-all duration-200 font-medium rounded-md hover:bg-emerald-600 text-sm"
                           >
                             Login
                             <i className="fa-solid fa-user text-sm ms-2"></i>
                           </Link>
                           <Link
                             to="/register"
-                             className="bg-emerald-600 py-[9px] px-4 ms-1 text-center text-white border border-emerald-600 transition-all duration-200 font-medium rounded-md hover:bg-emerald-700 text-sm"
+                             className="bg-emerald-600 lg:block hidden  py-[9px] px-4 ms-1 text-center text-white border border-emerald-600 transition-all duration-200 font-medium rounded-md hover:bg-emerald-700 text-sm"
                           >
                             Sign up
                           </Link>
@@ -513,7 +513,7 @@ export default function Navbar() {
                       </li>
            
                     </ul> :null}
-          
+          {/* sidebar */}
                                {Login != null ? (
                         <button
                           onClick={signOut}
