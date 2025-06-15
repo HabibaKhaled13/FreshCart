@@ -1,8 +1,20 @@
-# React + Vite
+<h2>E-Commerce Platform – Frontend</h2>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p>A fully responsive and modern e-commerce web app built with React.js. The project focuses on dynamic UI components, efficient state management, and optimized API integration using custom hooks and external libraries.</p>
+<ul>
+  <li>React : (hooks  & create custom hooks , functional components) </li>
+  <li>Using REST API tool</li>
+    <li>TanStack Query (React Query)</li>
+    <li>Context API: for state management</li>
+    <li>Tailwind css</li>
+    <li>Flowbite library</li>
+    <li>Swiper.js</li>
+   <li>Axios: for optimized API calls </li>
+   <li>Formik + Yup: for robust form validation</li>
+   <li>React Router dom: for seamless navigation </li>
+     <li>React-hot-toast for alert </li>
+     <li>Generate-react-cli for create components</li>
+</ul>
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
